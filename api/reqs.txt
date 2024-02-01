@@ -4,6 +4,8 @@ pymupdf
 cohere
 python-multipart
 langchain-community
+openai
+tiktoken
 fastapi
 uvicorn
 requests
