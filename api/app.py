@@ -48,10 +48,11 @@ def chat_cohere(query: str):
     return chroma_cohere.generate_prompt(query, temp_file_path)
 
 
-# @app.get("/api/chat/chatgpt/{query}")
-# def chat_chatgpt(query: str):
-#     return chroma_chatgpt.generate_prompt(query, temp_file_path)
+@app.get("/api/chat/chatgpt/{query}")
+def chat_chatgpt(query: str):
+    return chroma_chatgpt.generate_prompt(query, temp_file_path)
 
 
-
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
